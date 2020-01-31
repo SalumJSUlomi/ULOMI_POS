@@ -9,7 +9,7 @@
 - Handling multiple customers
 - Handling multiple stores
 - Simple stock management
-- Register repport
+- Register report
 - Products with taxes
 - Discount (you can add a spesific discount for every customer OR a discount for each sale)
 - Reports (customers, product number) (monthly stats in the current or other years) ... etc
