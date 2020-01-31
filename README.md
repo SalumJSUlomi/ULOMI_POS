@@ -9,8 +9,6 @@
 - Handling multiple customers
 - Handling multiple stores
 - Simple stock management
-- Handling multiple stores
-- Handling multiple stores
 - Register repport
 - Products with taxes
 - Discount (you can add a spesific discount for every customer OR a discount for each sale)
