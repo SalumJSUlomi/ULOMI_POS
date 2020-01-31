@@ -1,6 +1,6 @@
 # Ulomi POS - point of sale web application
 
-#### Ulomi POS is an online Point of Sale app has a user friendly interface that everyone can use without difficulty. The POS can be used online, on iPads, Android tablets or laptops.Say goodbye to ugly, expensive, outdated POS systems and enjoy the ULOMI POS web interface designed for the modern retailer.
+### Ulomi POS is an online Point of Sale app has a user friendly interface that everyone can use without difficulty. The POS can be used online, on iPads, Android tablets or laptops.Say goodbye to ugly, expensive, outdated POS systems and enjoy the ULOMI POS web interface designed for the modern retailer.
 
 ![preview](common/assets/img/large_marketing.png 'UlomiPOS Preview')
 
