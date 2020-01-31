@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>POS - Products</title>
+    <link rel="shortcut icon" href="common/files/Setting/logo.png" />
+    <!-- jQuery -->
+    <script
+      type="text/javascript"
+      src="common/assets/js/jquery-2.2.2.min.js"
+    ></script>
+    <script type="text/javascript" src="common/assets/js/loading.js"></script>
+    <!-- normalize & reset style -->
+    <link
+      rel="stylesheet"
+      href="common/assets/css/normalize.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="common/assets/css/reset.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="common/assets/css/jquery-ui.css"
+      type="text/css"
+    />
+    <!-- google lato font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700,900,300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Bootstrap Core CSS -->
+    <link href="common/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- bootstrap-horizon -->
+    <link href="common/assets/css/bootstrap-horizon.css" rel="stylesheet" />
+    <!-- datatable style -->
+    <link
+      href="common/assets/datatables/css/dataTables.bootstrap.css"
+      rel="stylesheet"
+    />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="common/assets/css/font-awesome.min.css" />
+    <!-- include summernote css-->
+    <link href="common/assets/css/summernote.css" rel="stylesheet" />
+    <!-- waves -->
+    <link rel="stylesheet" href="common/assets/css/waves.min.css" />
+    <!-- daterangepicker -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="common/assets/css/daterangepicker.css"
+    />
+    <!-- css for the preview keyset extension -->
+    <link
+      href="common/assets/css/keyboard-previewkeyset.css"
+      rel="stylesheet"
+    />
+    <!-- keyboard widget style -->
+    <link href="common/assets/css/keyboard.css" rel="stylesheet" />
+    <!-- Select 2 style -->
+    <link href="common/assets/css/select2.min.css" rel="stylesheet" />
+    <!-- Sweet alert swal -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="common/assets/css/sweetalert.css"
+    />
+    <!-- datepicker css -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="common/assets/css/bootstrap-datepicker.min.css"
+    />
+    <!-- Custom CSS -->
+    <link href="common/assets/css/Style-Light.css" rel="stylesheet" />
+  </head>
+  <body>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+         <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="common/files/Setting/logo.png" alt="logo"  style='max-height: 45px; max-width: 200px'></a>
+         </div>
+         <!-- Brand and toggle get grouped for better mobile display -->
+         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+               <li class="flat-box"><a href="http://www.dar-elweb.com/demos/zarpos/"><i class="fa fa-credit-card"></i> POS</a></li>
+              <li class="flat-box"><a href="http://www.dar-elweb.com/demos/zarpos/products"><i class="fa fa-archive"></i> Product</a></li>
+              <li class="dropdown">
+                 <a href="#" class="dropdown-toggle flat-box" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-users"></i> People <span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+                    <li class="flat-box"><a href="http://www.dar-elweb.com/demos/zarpos/customers"><i class="fa fa-user"></i> Customers</a></li>
+                    <li class="flat-box"><a href="http://www.dar-elweb.com/demos/zarpos/suppliers"><i class="fa fa-truck"></i> Suppliers</a></li>
+                 </ul>
+              </li>
+              <li class="flat-box"><a href="http://www.dar-elweb.com/demos/zarpos/sales"><i class="fa fa-ticket"></i> Sales</a></li>
+              <li class="flat-box"><a href="http://www.dar-elweb.com/demos/zarpos/expences"><i class="fa fa-usd"></i> Expense</a></li>
+              <li class="dropdown">
+                 <a href="#" class="dropdown-toggle flat-box" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bookmark"></i> Categories <span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+                    <li class="flat-box"><a href="http://www.dar-elweb.com/demos/zarpos/categories"><i class="fa fa-archive"></i> Product</a></li>
+                    <li class="flat-box"><a href="http://www.dar-elweb.com/demos/zarpos/categorie_expences"><i class="fa fa-usd"></i> Expense</a></li>
+                 </ul>
+              </li>
+              <li class="flat-box"><a href="http://www.dar-elweb.com/demos/zarpos/settings?tab=setting"><i class="fa fa-cogs"></i> Setting</a></li>                 <li class="flat-box"><a href="http://www.dar-elweb.com/demos/zarpos/stats"><i class="fa fa-line-chart"></i> Reports</a></li>               </ul>
+            <ul class="nav navbar-nav navbar-right">
+               <li><a href="">
+                     <img class="img-circle topbar-userpic hidden-xs" src="common/files/Avatars/user.jpg" width="30px" height="30px">
+                     <span class="hidden-xs"> &nbsp;&nbsp;Salum Jabir </span>
+                  </a>
+               </li>
+               <li class="dropdown language">
+                  <a href="#" class="dropdown-toggle flat-box" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                     <img src="common/assets/img/flags/en.png" class="flag" alt="language">
+                     <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                     <li class="flat-box"><a href="http://www.dar-elweb.com/demos/zarpos/dashboard/change/english"><img src="common/assets/img/flags/en.png" class="flag" alt="language"> English</a></li>
+                     <li class="flat-box"><a href="http://www.dar-elweb.com/demos/zarpos/dashboard/change/francais"><img src="common/assets/img/flags/fr.png" class="flag" alt="language"> Français</a></li>
+                     <li class="flat-box"><a href="http://www.dar-elweb.com/demos/zarpos/dashboard/change/portuguese"><img src="common/assets/img/flags/pr.png" class="flag" alt="language"> Portuguese</a></li>
+                     <li class="flat-box"><a href="http://www.dar-elweb.com/demos/zarpos/dashboard/change/spanish"><img src="common/assets/img/flags/sp.png" class="flag" alt="language"> Spanish</a></li>
+                     <li class="flat-box"><a href="http://www.dar-elweb.com/demos/zarpos/dashboard/change/arabic"><img src="common/assets/img/flags/ar.png" class="flag" alt="language"> العربية</a></li>
+                     <li class="flat-box"><a href="http://www.dar-elweb.com/demos/zarpos/dashboard/change/danish"><img src="common/assets/img/flags/da.png" class="flag" alt="language"> Danish</a></li>
+                     <li class="flat-box"><a href="http://www.dar-elweb.com/demos/zarpos/dashboard/change/turkish"><img src="common/assets/img/flags/tr.png" class="flag" alt="language"> Turkish</a></li>
+                     <li class="flat-box"><a href="http://www.dar-elweb.com/demos/zarpos/dashboard/change/greek"><img src="common/assets/img/flags/gr.png" class="flag" alt="language"> Greek</a></li>
+                     <li class="flat-box"><a href="http://www.dar-elweb.com/demos/zarpos/dashboard/change/swahili"><img src="common/assets/img/flags/tz.png" class="flag" alt="language"> Swahili</a></li>
+                  </ul>
+               </li>
+               <li class="flat-box"><a href="http://www.dar-elweb.com/demos/zarpos/logout" title="Logout"><i class="fa fa-sign-out fa-lg"></i></a></li>
+            </ul>
+         </div>
+         <div id="loadingimg"></div>
+      </div>
+      <!-- /.container -->
+   </nav>
+   <!-- Page Content -->
+
+
+   <!-- Page Content -->
+<div class="container">
+<div class="row" style="margin-top:100px;">
+   <form action="products" method="post" class="form-inline float-right hidden-xs hidden-sm" style="margin-bottom:-50px;">
+      <label for="Supplier">Supplier</label>
+      <select class="form-control" id="Supplier" name="filtersupp">
+         <option value=''>All</option>
+                        <option value="supplier 01" >supplier 01</option>
+                        <option value="Supplier 02" >Supplier 02</option>
+                  </select>
+      <label for="Producttype">Product type</label>
+      <select class="form-control" id="Producttype" name="filtertype">
+         <option value=''>All</option>
+         <option value="0" >Standard</option>
+         <option value="1" >Service</option>
+         <option value="2" >combination</option>
+      </select>
+      <button type="submit" class="btn btn-default">Apply Filter</button>
+   </form>
+   <table id="Table" class="table table-striped table-bordered" cellspacing="0" width="100%">
+       <thead>
+           <tr>
+               <th class="hidden-xs">Code</th>
+               <th>Name</th>
+               <th>Category</th>
+               <th class="hidden-xs">Product Description</th>
+               <th class="hidden-xs">tax (%)</th>
+               <th>Price</th>
+               <th>Action</th>
+           </tr>
+       </thead>
+
+       <tbody>
+                        <tr>
+              <td class="hidden-xs productcode">123456</td>
+              <td>Computer</td>
+              <td>computers</td>
+              <td class="hidden-xs">computer desktops, Wi-Fi, webcam, screen,&#8230;</td>
+              <td>18%</td>
+              <td  data-order="350">350.00 SYP</td>
+              <td><div class="btn-group">
+                    <a class="btn btn-default" href="javascript:void(0)" data-toggle="popover" data-placement="left"  data-html="true" title='Are you sure ?' data-content='<a class="btn btn-danger" href="products/delete/39">Yes, delete it!</a>'><i class="fa fa-times"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" onclick="Viewproduct(39)"><i class="fa fa-file-text" data-toggle="tooltip" data-placement="top" title="View product"></i></a>
+                    <a class="btn btn-default" href="products/edit/39" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil"></i></a>
+                    <a class="btn btn-default" href="javascript:void(0)" onclick="modifystock(39)"><i class="fa fa-tasks" data-toggle="tooltip" data-placement="top"  title='Modify Stock'></i></a>                       <a class="btn color01 white open-modalimage"data-id="08153b71766514c0d83ea3ea97de00f2.jpg" href="" data-toggle="modal" data-target="#ImageModal"><i class="fa fa-picture-o" data-toggle="tooltip" data-placement="top" title="View Image"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" data-toggle="modal" data-target="#barcode" onclick="productBcode = 123456"><i class="fa fa-barcode" data-toggle="tooltip" data-placement="top" title="print barcode"></i></a>
+                  </div>
+               </td>
+           </tr>
+                      <tr>
+              <td class="hidden-xs productcode">P1203</td>
+              <td>pfjnfdjbfb</td>
+              <td>Kebaplar</td>
+              <td class="hidden-xs"></td>
+              <td></td>
+              <td  data-order="23000">23000.00 SYP</td>
+              <td><div class="btn-group">
+                    <a class="btn btn-default" href="javascript:void(0)" data-toggle="popover" data-placement="left"  data-html="true" title='Are you sure ?' data-content='<a class="btn btn-danger" href="products/delete/144">Yes, delete it!</a>'><i class="fa fa-times"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" onclick="Viewproduct(144)"><i class="fa fa-file-text" data-toggle="tooltip" data-placement="top" title="View product"></i></a>
+                    <a class="btn btn-default" href="products/edit/144" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil"></i></a>
+                                                                  <a class="btn btn-default" href="javascript:void(0)" data-toggle="modal" data-target="#barcode" onclick="productBcode = P1203"><i class="fa fa-barcode" data-toggle="tooltip" data-placement="top" title="print barcode"></i></a>
+                  </div>
+               </td>
+           </tr>
+                      <tr>
+              <td class="hidden-xs productcode">451515</td>
+              <td>Mesa de juntas con sillas</td>
+              <td>services</td>
+              <td class="hidden-xs"></td>
+              <td></td>
+              <td  data-order="84">84.00 SYP</td>
+              <td><div class="btn-group">
+                    <a class="btn btn-default" href="javascript:void(0)" data-toggle="popover" data-placement="left"  data-html="true" title='Are you sure ?' data-content='<a class="btn btn-danger" href="products/delete/141">Yes, delete it!</a>'><i class="fa fa-times"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" onclick="Viewproduct(141)"><i class="fa fa-file-text" data-toggle="tooltip" data-placement="top" title="View product"></i></a>
+                    <a class="btn btn-default" href="products/edit/141" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil"></i></a>
+                    <a class="btn btn-default" href="javascript:void(0)" onclick="modifystock(141)"><i class="fa fa-tasks" data-toggle="tooltip" data-placement="top"  title='Modify Stock'></i></a>                                              <a class="btn btn-default" href="javascript:void(0)" data-toggle="modal" data-target="#barcode" onclick="productBcode = 451515"><i class="fa fa-barcode" data-toggle="tooltip" data-placement="top" title="print barcode"></i></a>
+                  </div>
+               </td>
+           </tr>
+                      <tr>
+              <td class="hidden-xs productcode">123451</td>
+              <td>sweater</td>
+              <td>Clothing</td>
+              <td class="hidden-xs">fashion, clothes , sweater, wool, cardigan,&#8230;</td>
+              <td>12%</td>
+              <td  data-order="120">120.00 SYP</td>
+              <td><div class="btn-group">
+                    <a class="btn btn-default" href="javascript:void(0)" data-toggle="popover" data-placement="left"  data-html="true" title='Are you sure ?' data-content='<a class="btn btn-danger" href="products/delete/41">Yes, delete it!</a>'><i class="fa fa-times"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" onclick="Viewproduct(41)"><i class="fa fa-file-text" data-toggle="tooltip" data-placement="top" title="View product"></i></a>
+                    <a class="btn btn-default" href="products/edit/41" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil"></i></a>
+                    <a class="btn btn-default" href="javascript:void(0)" onclick="modifystock(41)"><i class="fa fa-tasks" data-toggle="tooltip" data-placement="top"  title='Modify Stock'></i></a>                                              <a class="btn btn-default" href="javascript:void(0)" data-toggle="modal" data-target="#barcode" onclick="productBcode = 123451"><i class="fa fa-barcode" data-toggle="tooltip" data-placement="top" title="print barcode"></i></a>
+                  </div>
+               </td>
+           </tr>
+                      <tr>
+              <td class="hidden-xs productcode">123654</td>
+              <td>tie</td>
+              <td>Clothing</td>
+              <td class="hidden-xs">fashion, tie, clothes, accessory , accessoire,&#8230;</td>
+              <td>12%</td>
+              <td  data-order="46">46.00 SYP</td>
+              <td><div class="btn-group">
+                    <a class="btn btn-default" href="javascript:void(0)" data-toggle="popover" data-placement="left"  data-html="true" title='Are you sure ?' data-content='<a class="btn btn-danger" href="products/delete/42">Yes, delete it!</a>'><i class="fa fa-times"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" onclick="Viewproduct(42)"><i class="fa fa-file-text" data-toggle="tooltip" data-placement="top" title="View product"></i></a>
+                    <a class="btn btn-default" href="products/edit/42" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil"></i></a>
+                    <a class="btn btn-default" href="javascript:void(0)" onclick="modifystock(42)"><i class="fa fa-tasks" data-toggle="tooltip" data-placement="top"  title='Modify Stock'></i></a>                       <a class="btn color04 white open-modalimage"data-id="6a84bc6792a836c72ea473a4ef280484.jpeg" href="" data-toggle="modal" data-target="#ImageModal"><i class="fa fa-picture-o" data-toggle="tooltip" data-placement="top" title="View Image"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" data-toggle="modal" data-target="#barcode" onclick="productBcode = 123654"><i class="fa fa-barcode" data-toggle="tooltip" data-placement="top" title="print barcode"></i></a>
+                  </div>
+               </td>
+           </tr>
+                      <tr>
+              <td class="hidden-xs productcode">321654</td>
+              <td>jacket</td>
+              <td>Clothing</td>
+              <td class="hidden-xs">winter  jacket </td>
+              <td>12%</td>
+              <td  data-order="190">190.00 SYP</td>
+              <td><div class="btn-group">
+                    <a class="btn btn-default" href="javascript:void(0)" data-toggle="popover" data-placement="left"  data-html="true" title='Are you sure ?' data-content='<a class="btn btn-danger" href="products/delete/43">Yes, delete it!</a>'><i class="fa fa-times"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" onclick="Viewproduct(43)"><i class="fa fa-file-text" data-toggle="tooltip" data-placement="top" title="View product"></i></a>
+                    <a class="btn btn-default" href="products/edit/43" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil"></i></a>
+                    <a class="btn btn-default" href="javascript:void(0)" onclick="modifystock(43)"><i class="fa fa-tasks" data-toggle="tooltip" data-placement="top"  title='Modify Stock'></i></a>                       <a class="btn color05 white open-modalimage"data-id="7bde4f5af295906be56a243254245953.jpeg" href="" data-toggle="modal" data-target="#ImageModal"><i class="fa fa-picture-o" data-toggle="tooltip" data-placement="top" title="View Image"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" data-toggle="modal" data-target="#barcode" onclick="productBcode = 321654"><i class="fa fa-barcode" data-toggle="tooltip" data-placement="top" title="print barcode"></i></a>
+                  </div>
+               </td>
+           </tr>
+                      <tr>
+              <td class="hidden-xs productcode">654321</td>
+              <td>jacket men</td>
+              <td>Clothing</td>
+              <td class="hidden-xs">fashion  man  jacket </td>
+              <td>12%</td>
+              <td  data-order="225">225.00 SYP</td>
+              <td><div class="btn-group">
+                    <a class="btn btn-default" href="javascript:void(0)" data-toggle="popover" data-placement="left"  data-html="true" title='Are you sure ?' data-content='<a class="btn btn-danger" href="products/delete/44">Yes, delete it!</a>'><i class="fa fa-times"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" onclick="Viewproduct(44)"><i class="fa fa-file-text" data-toggle="tooltip" data-placement="top" title="View product"></i></a>
+                    <a class="btn btn-default" href="products/edit/44" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil"></i></a>
+                    <a class="btn btn-default" href="javascript:void(0)" onclick="modifystock(44)"><i class="fa fa-tasks" data-toggle="tooltip" data-placement="top"  title='Modify Stock'></i></a>                       <a class="btn color01 white open-modalimage"data-id="38c80531adc7a2603ce4a95adc3dafb9.jpg" href="" data-toggle="modal" data-target="#ImageModal"><i class="fa fa-picture-o" data-toggle="tooltip" data-placement="top" title="View Image"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" data-toggle="modal" data-target="#barcode" onclick="productBcode = 654321"><i class="fa fa-barcode" data-toggle="tooltip" data-placement="top" title="print barcode"></i></a>
+                  </div>
+               </td>
+           </tr>
+                      <tr>
+              <td class="hidden-xs productcode">632541</td>
+              <td>grapes</td>
+              <td>fruits</td>
+              <td class="hidden-xs">food ,  leaf,  grape,s  wet,  green</td>
+              <td>12%</td>
+              <td  data-order="18">18.00 SYP</td>
+              <td><div class="btn-group">
+                    <a class="btn btn-default" href="javascript:void(0)" data-toggle="popover" data-placement="left"  data-html="true" title='Are you sure ?' data-content='<a class="btn btn-danger" href="products/delete/45">Yes, delete it!</a>'><i class="fa fa-times"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" onclick="Viewproduct(45)"><i class="fa fa-file-text" data-toggle="tooltip" data-placement="top" title="View product"></i></a>
+                    <a class="btn btn-default" href="products/edit/45" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil"></i></a>
+                    <a class="btn btn-default" href="javascript:void(0)" onclick="modifystock(45)"><i class="fa fa-tasks" data-toggle="tooltip" data-placement="top"  title='Modify Stock'></i></a>                       <a class="btn color03 white open-modalimage"data-id="c41a289d57dc5d6efa5bad1476ac5397.jpeg" href="" data-toggle="modal" data-target="#ImageModal"><i class="fa fa-picture-o" data-toggle="tooltip" data-placement="top" title="View Image"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" data-toggle="modal" data-target="#barcode" onclick="productBcode = 632541"><i class="fa fa-barcode" data-toggle="tooltip" data-placement="top" title="print barcode"></i></a>
+                  </div>
+               </td>
+           </tr>
+                      <tr>
+              <td class="hidden-xs productcode">412596</td>
+              <td>strawberries</td>
+              <td>fruits</td>
+              <td class="hidden-xs">healthy  red sweet  strawberries</td>
+              <td>18%</td>
+              <td  data-order="15">15.00 SYP</td>
+              <td><div class="btn-group">
+                    <a class="btn btn-default" href="javascript:void(0)" data-toggle="popover" data-placement="left"  data-html="true" title='Are you sure ?' data-content='<a class="btn btn-danger" href="products/delete/46">Yes, delete it!</a>'><i class="fa fa-times"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" onclick="Viewproduct(46)"><i class="fa fa-file-text" data-toggle="tooltip" data-placement="top" title="View product"></i></a>
+                    <a class="btn btn-default" href="products/edit/46" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil"></i></a>
+                    <a class="btn btn-default" href="javascript:void(0)" onclick="modifystock(46)"><i class="fa fa-tasks" data-toggle="tooltip" data-placement="top"  title='Modify Stock'></i></a>                       <a class="btn color07 white open-modalimage"data-id="fc9a67111a5750be4ee3ca589d9f5159.jpeg" href="" data-toggle="modal" data-target="#ImageModal"><i class="fa fa-picture-o" data-toggle="tooltip" data-placement="top" title="View Image"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" data-toggle="modal" data-target="#barcode" onclick="productBcode = 412596"><i class="fa fa-barcode" data-toggle="tooltip" data-placement="top" title="print barcode"></i></a>
+                  </div>
+               </td>
+           </tr>
+                      <tr>
+              <td class="hidden-xs productcode">458726</td>
+              <td>apple</td>
+              <td>fruits</td>
+              <td class="hidden-xs">healthy  apple  fruit</td>
+              <td>18%</td>
+              <td  data-order="19">19.00 SYP</td>
+              <td><div class="btn-group">
+                    <a class="btn btn-default" href="javascript:void(0)" data-toggle="popover" data-placement="left"  data-html="true" title='Are you sure ?' data-content='<a class="btn btn-danger" href="products/delete/47">Yes, delete it!</a>'><i class="fa fa-times"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" onclick="Viewproduct(47)"><i class="fa fa-file-text" data-toggle="tooltip" data-placement="top" title="View product"></i></a>
+                    <a class="btn btn-default" href="products/edit/47" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil"></i></a>
+                    <a class="btn btn-default" href="javascript:void(0)" onclick="modifystock(47)"><i class="fa fa-tasks" data-toggle="tooltip" data-placement="top"  title='Modify Stock'></i></a>                       <a class="btn color03 white open-modalimage"data-id="e336f0ef8e5efe615cc749402296801e.jpeg" href="" data-toggle="modal" data-target="#ImageModal"><i class="fa fa-picture-o" data-toggle="tooltip" data-placement="top" title="View Image"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" data-toggle="modal" data-target="#barcode" onclick="productBcode = 458726"><i class="fa fa-barcode" data-toggle="tooltip" data-placement="top" title="print barcode"></i></a>
+                  </div>
+               </td>
+           </tr>
+                      <tr>
+              <td class="hidden-xs productcode">759864</td>
+              <td>orange</td>
+              <td>fruits</td>
+              <td class="hidden-xs">healthy  orange,  orange  fruit</td>
+              <td>18%</td>
+              <td  data-order="16">16.00 SYP</td>
+              <td><div class="btn-group">
+                    <a class="btn btn-default" href="javascript:void(0)" data-toggle="popover" data-placement="left"  data-html="true" title='Are you sure ?' data-content='<a class="btn btn-danger" href="products/delete/48">Yes, delete it!</a>'><i class="fa fa-times"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" onclick="Viewproduct(48)"><i class="fa fa-file-text" data-toggle="tooltip" data-placement="top" title="View product"></i></a>
+                    <a class="btn btn-default" href="products/edit/48" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil"></i></a>
+                    <a class="btn btn-default" href="javascript:void(0)" onclick="modifystock(48)"><i class="fa fa-tasks" data-toggle="tooltip" data-placement="top"  title='Modify Stock'></i></a>                       <a class="btn color06 white open-modalimage"data-id="fe072bd1d5c029171ae20d73e869e783.jpeg" href="" data-toggle="modal" data-target="#ImageModal"><i class="fa fa-picture-o" data-toggle="tooltip" data-placement="top" title="View Image"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" data-toggle="modal" data-target="#barcode" onclick="productBcode = 759864"><i class="fa fa-barcode" data-toggle="tooltip" data-placement="top" title="print barcode"></i></a>
+                  </div>
+               </td>
+           </tr>
+                      <tr>
+              <td class="hidden-xs productcode">856512</td>
+              <td>kiwi</td>
+              <td>Category</td>
+              <td class="hidden-xs">fruit  kiwi </td>
+              <td>18%</td>
+              <td  data-order="26">26.00 SYP</td>
+              <td><div class="btn-group">
+                    <a class="btn btn-default" href="javascript:void(0)" data-toggle="popover" data-placement="left"  data-html="true" title='Are you sure ?' data-content='<a class="btn btn-danger" href="products/delete/49">Yes, delete it!</a>'><i class="fa fa-times"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" onclick="Viewproduct(49)"><i class="fa fa-file-text" data-toggle="tooltip" data-placement="top" title="View product"></i></a>
+                    <a class="btn btn-default" href="products/edit/49" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil"></i></a>
+                    <a class="btn btn-default" href="javascript:void(0)" onclick="modifystock(49)"><i class="fa fa-tasks" data-toggle="tooltip" data-placement="top"  title='Modify Stock'></i></a>                       <a class="btn color04 white open-modalimage"data-id="daf3945ba5da7a857f226368cac09ab9.jpeg" href="" data-toggle="modal" data-target="#ImageModal"><i class="fa fa-picture-o" data-toggle="tooltip" data-placement="top" title="View Image"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" data-toggle="modal" data-target="#barcode" onclick="productBcode = 856512"><i class="fa fa-barcode" data-toggle="tooltip" data-placement="top" title="print barcode"></i></a>
+                  </div>
+               </td>
+           </tr>
+                      <tr>
+              <td class="hidden-xs productcode">415874</td>
+              <td>mouse</td>
+              <td>computers</td>
+              <td class="hidden-xs">apple   mouse  </td>
+              <td>12%</td>
+              <td  data-order="80">80.00 SYP</td>
+              <td><div class="btn-group">
+                    <a class="btn btn-default" href="javascript:void(0)" data-toggle="popover" data-placement="left"  data-html="true" title='Are you sure ?' data-content='<a class="btn btn-danger" href="products/delete/50">Yes, delete it!</a>'><i class="fa fa-times"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" onclick="Viewproduct(50)"><i class="fa fa-file-text" data-toggle="tooltip" data-placement="top" title="View product"></i></a>
+                    <a class="btn btn-default" href="products/edit/50" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil"></i></a>
+                    <a class="btn btn-default" href="javascript:void(0)" onclick="modifystock(50)"><i class="fa fa-tasks" data-toggle="tooltip" data-placement="top"  title='Modify Stock'></i></a>                       <a class="btn color01 white open-modalimage"data-id="4e5ce62c5d4e91cfa7efd093e3638c0d.jpg" href="" data-toggle="modal" data-target="#ImageModal"><i class="fa fa-picture-o" data-toggle="tooltip" data-placement="top" title="View Image"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" data-toggle="modal" data-target="#barcode" onclick="productBcode = 415874"><i class="fa fa-barcode" data-toggle="tooltip" data-placement="top" title="print barcode"></i></a>
+                  </div>
+               </td>
+           </tr>
+                      <tr>
+              <td class="hidden-xs productcode">126578</td>
+              <td>keyboard</td>
+              <td>computers</td>
+              <td class="hidden-xs">apple mac  keyboard</td>
+              <td>12%</td>
+              <td  data-order="80">80.00 SYP</td>
+              <td><div class="btn-group">
+                    <a class="btn btn-default" href="javascript:void(0)" data-toggle="popover" data-placement="left"  data-html="true" title='Are you sure ?' data-content='<a class="btn btn-danger" href="products/delete/51">Yes, delete it!</a>'><i class="fa fa-times"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" onclick="Viewproduct(51)"><i class="fa fa-file-text" data-toggle="tooltip" data-placement="top" title="View product"></i></a>
+                    <a class="btn btn-default" href="products/edit/51" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil"></i></a>
+                    <a class="btn btn-default" href="javascript:void(0)" onclick="modifystock(51)"><i class="fa fa-tasks" data-toggle="tooltip" data-placement="top"  title='Modify Stock'></i></a>                       <a class="btn color05 white open-modalimage"data-id="c2118e267794191cedcdef5b0fd72fc3.jpg" href="" data-toggle="modal" data-target="#ImageModal"><i class="fa fa-picture-o" data-toggle="tooltip" data-placement="top" title="View Image"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" data-toggle="modal" data-target="#barcode" onclick="productBcode = 126578"><i class="fa fa-barcode" data-toggle="tooltip" data-placement="top" title="print barcode"></i></a>
+                  </div>
+               </td>
+           </tr>
+                      <tr>
+              <td class="hidden-xs productcode">738642</td>
+              <td>headphone</td>
+              <td>computers</td>
+              <td class="hidden-xs">music headphone</td>
+              <td>12%</td>
+              <td  data-order="120">120.00 SYP</td>
+              <td><div class="btn-group">
+                    <a class="btn btn-default" href="javascript:void(0)" data-toggle="popover" data-placement="left"  data-html="true" title='Are you sure ?' data-content='<a class="btn btn-danger" href="products/delete/52">Yes, delete it!</a>'><i class="fa fa-times"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" onclick="Viewproduct(52)"><i class="fa fa-file-text" data-toggle="tooltip" data-placement="top" title="View product"></i></a>
+                    <a class="btn btn-default" href="products/edit/52" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil"></i></a>
+                    <a class="btn btn-default" href="javascript:void(0)" onclick="modifystock(52)"><i class="fa fa-tasks" data-toggle="tooltip" data-placement="top"  title='Modify Stock'></i></a>                       <a class="btn color02 white open-modalimage"data-id="530d2ed6d3f5f892cd839fae31241e33.jpg" href="" data-toggle="modal" data-target="#ImageModal"><i class="fa fa-picture-o" data-toggle="tooltip" data-placement="top" title="View Image"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" data-toggle="modal" data-target="#barcode" onclick="productBcode = 738642"><i class="fa fa-barcode" data-toggle="tooltip" data-placement="top" title="print barcode"></i></a>
+                  </div>
+               </td>
+           </tr>
+                      <tr>
+              <td class="hidden-xs productcode">538641</td>
+              <td>motherboard</td>
+              <td>computers</td>
+              <td class="hidden-xs">pc motherboard with 16 Gb RAM</td>
+              <td>12%</td>
+              <td  data-order="179">179.00 SYP</td>
+              <td><div class="btn-group">
+                    <a class="btn btn-default" href="javascript:void(0)" data-toggle="popover" data-placement="left"  data-html="true" title='Are you sure ?' data-content='<a class="btn btn-danger" href="products/delete/53">Yes, delete it!</a>'><i class="fa fa-times"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" onclick="Viewproduct(53)"><i class="fa fa-file-text" data-toggle="tooltip" data-placement="top" title="View product"></i></a>
+                    <a class="btn btn-default" href="products/edit/53" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil"></i></a>
+                    <a class="btn btn-default" href="javascript:void(0)" onclick="modifystock(53)"><i class="fa fa-tasks" data-toggle="tooltip" data-placement="top"  title='Modify Stock'></i></a>                       <a class="btn color04 white open-modalimage"data-id="99f4dd9edd5a5def6b8a70414afffb13.jpg" href="" data-toggle="modal" data-target="#ImageModal"><i class="fa fa-picture-o" data-toggle="tooltip" data-placement="top" title="View Image"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" data-toggle="modal" data-target="#barcode" onclick="productBcode = 538641"><i class="fa fa-barcode" data-toggle="tooltip" data-placement="top" title="print barcode"></i></a>
+                  </div>
+               </td>
+           </tr>
+                      <tr>
+              <td class="hidden-xs productcode">753586</td>
+              <td>notebook</td>
+              <td>computers</td>
+              <td class="hidden-xs">macbook  notebook  computer</td>
+              <td>18%</td>
+              <td  data-order="760">760.00 SYP</td>
+              <td><div class="btn-group">
+                    <a class="btn btn-default" href="javascript:void(0)" data-toggle="popover" data-placement="left"  data-html="true" title='Are you sure ?' data-content='<a class="btn btn-danger" href="products/delete/54">Yes, delete it!</a>'><i class="fa fa-times"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" onclick="Viewproduct(54)"><i class="fa fa-file-text" data-toggle="tooltip" data-placement="top" title="View product"></i></a>
+                    <a class="btn btn-default" href="products/edit/54" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil"></i></a>
+                    <a class="btn btn-default" href="javascript:void(0)" onclick="modifystock(54)"><i class="fa fa-tasks" data-toggle="tooltip" data-placement="top"  title='Modify Stock'></i></a>                       <a class="btn color05 white open-modalimage"data-id="d3472f35b597a1ea3a17fe92aa266e1c.jpg" href="" data-toggle="modal" data-target="#ImageModal"><i class="fa fa-picture-o" data-toggle="tooltip" data-placement="top" title="View Image"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" data-toggle="modal" data-target="#barcode" onclick="productBcode = 753586"><i class="fa fa-barcode" data-toggle="tooltip" data-placement="top" title="print barcode"></i></a>
+                  </div>
+               </td>
+           </tr>
+                      <tr>
+              <td class="hidden-xs productcode">126547</td>
+              <td>computer repair</td>
+              <td>services</td>
+              <td class="hidden-xs">standard computer repairing</td>
+              <td>12%</td>
+              <td  data-order="350">350.00 SYP</td>
+              <td><div class="btn-group">
+                    <a class="btn btn-default" href="javascript:void(0)" data-toggle="popover" data-placement="left"  data-html="true" title='Are you sure ?' data-content='<a class="btn btn-danger" href="products/delete/86">Yes, delete it!</a>'><i class="fa fa-times"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" onclick="Viewproduct(86)"><i class="fa fa-file-text" data-toggle="tooltip" data-placement="top" title="View product"></i></a>
+                    <a class="btn btn-default" href="products/edit/86" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil"></i></a>
+                                           <a class="btn color05 white open-modalimage"data-id="f9ce7b84c89b9fffe7d789d047a3f4bf.jpeg" href="" data-toggle="modal" data-target="#ImageModal"><i class="fa fa-picture-o" data-toggle="tooltip" data-placement="top" title="View Image"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" data-toggle="modal" data-target="#barcode" onclick="productBcode = 126547"><i class="fa fa-barcode" data-toggle="tooltip" data-placement="top" title="print barcode"></i></a>
+                  </div>
+               </td>
+           </tr>
+                      <tr>
+              <td class="hidden-xs productcode">132698</td>
+              <td>gift folding</td>
+              <td>services</td>
+              <td class="hidden-xs"><p>folding service of gifts</p></td>
+              <td>0</td>
+              <td  data-order="7">7.00 SYP</td>
+              <td><div class="btn-group">
+                    <a class="btn btn-default" href="javascript:void(0)" data-toggle="popover" data-placement="left"  data-html="true" title='Are you sure ?' data-content='<a class="btn btn-danger" href="products/delete/87">Yes, delete it!</a>'><i class="fa fa-times"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" onclick="Viewproduct(87)"><i class="fa fa-file-text" data-toggle="tooltip" data-placement="top" title="View product"></i></a>
+                    <a class="btn btn-default" href="products/edit/87" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil"></i></a>
+                                           <a class="btn color04 white open-modalimage"data-id="4d23da3199f973968f246c9154ebb365.jpeg" href="" data-toggle="modal" data-target="#ImageModal"><i class="fa fa-picture-o" data-toggle="tooltip" data-placement="top" title="View Image"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" data-toggle="modal" data-target="#barcode" onclick="productBcode = 132698"><i class="fa fa-barcode" data-toggle="tooltip" data-placement="top" title="print barcode"></i></a>
+                  </div>
+               </td>
+           </tr>
+                      <tr>
+              <td class="hidden-xs productcode">123548</td>
+              <td>Clothing</td>
+              <td>Clothing</td>
+              <td class="hidden-xs"><p>full&nbsp;Clothing</p></td>
+              <td>10%</td>
+              <td  data-order="100">100.00 SYP</td>
+              <td><div class="btn-group">
+                    <a class="btn btn-default" href="javascript:void(0)" data-toggle="popover" data-placement="left"  data-html="true" title='Are you sure ?' data-content='<a class="btn btn-danger" href="products/delete/139">Yes, delete it!</a>'><i class="fa fa-times"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" onclick="Viewproduct(139)"><i class="fa fa-file-text" data-toggle="tooltip" data-placement="top" title="View product"></i></a>
+                    <a class="btn btn-default" href="products/edit/139" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil"></i></a>
+                                           <a class="btn color05 white open-modalimage"data-id="aab5f1f58017eda2d34af8b6dca8b7d6.jpg" href="" data-toggle="modal" data-target="#ImageModal"><i class="fa fa-picture-o" data-toggle="tooltip" data-placement="top" title="View Image"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" data-toggle="modal" data-target="#barcode" onclick="productBcode = 123548"><i class="fa fa-barcode" data-toggle="tooltip" data-placement="top" title="print barcode"></i></a>
+                  </div>
+               </td>
+           </tr>
+                      <tr>
+              <td class="hidden-xs productcode">2122654</td>
+              <td>???? ???? </td>
+              <td>computers</td>
+              <td class="hidden-xs"></td>
+              <td></td>
+              <td  data-order="4">4.00 SYP</td>
+              <td><div class="btn-group">
+                    <a class="btn btn-default" href="javascript:void(0)" data-toggle="popover" data-placement="left"  data-html="true" title='Are you sure ?' data-content='<a class="btn btn-danger" href="products/delete/142">Yes, delete it!</a>'><i class="fa fa-times"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" onclick="Viewproduct(142)"><i class="fa fa-file-text" data-toggle="tooltip" data-placement="top" title="View product"></i></a>
+                    <a class="btn btn-default" href="products/edit/142" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil"></i></a>
+                    <a class="btn btn-default" href="javascript:void(0)" onclick="modifystock(142)"><i class="fa fa-tasks" data-toggle="tooltip" data-placement="top"  title='Modify Stock'></i></a>                                              <a class="btn btn-default" href="javascript:void(0)" data-toggle="modal" data-target="#barcode" onclick="productBcode = 2122654"><i class="fa fa-barcode" data-toggle="tooltip" data-placement="top" title="print barcode"></i></a>
+                  </div>
+               </td>
+           </tr>
+                      <tr>
+              <td class="hidden-xs productcode">Keb1</td>
+              <td>Kebap 500Gr</td>
+              <td>Et yemekleri</td>
+              <td class="hidden-xs"><p>Kuzu kabap<br></p></td>
+              <td></td>
+              <td  data-order="6000">6000.00 SYP</td>
+              <td><div class="btn-group">
+                    <a class="btn btn-default" href="javascript:void(0)" data-toggle="popover" data-placement="left"  data-html="true" title='Are you sure ?' data-content='<a class="btn btn-danger" href="products/delete/143">Yes, delete it!</a>'><i class="fa fa-times"></i></a>                       <a class="btn btn-default" href="javascript:void(0)" onclick="Viewproduct(143)"><i class="fa fa-file-text" data-toggle="tooltip" data-placement="top" title="View product"></i></a>
+                    <a class="btn btn-default" href="products/edit/143" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil"></i></a>
+                                                                  <a class="btn btn-default" href="javascript:void(0)" data-toggle="modal" data-target="#barcode" onclick="productBcode = Keb1"><i class="fa fa-barcode" data-toggle="tooltip" data-placement="top" title="print barcode"></i></a>
+                  </div>
+               </td>
+           </tr>
+                  </tbody>
+   </table>
+</div>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-add btn-lg" data-toggle="modal" data-target="#Addproduct">Add Product</button>
+
+<div class=" float-right">
+   <a class="btn btn-add btn-xs" href="products/csv">Download CSV</a>
+   <a class="btn btn-add btn-xs" data-toggle="modal" data-target="#ImportProducts">Upload CSV file</a>
+</div>
+</div>
+<!-- /.container -->
+<div class="modal fade" id="ImageModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
+<div class="modal-dialog" role="document">
+   <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Image</h4>
+      </div>
+      <div class="modal-body">
+        <img id="image" src="" class="img-responsive center" alt="" />
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+   </div>
+</div>
+</div>
+
+<script src="http://www.dar-elweb.com/demos/zarpos/assets/js/jquery-ui.min.js"></script>
+<script type="text/javascript">
+var items = [];
+$(function() {
+$('#addform').submit(function()
+{
+   var error = false;
+   $('.productcode').each(function() {
+      if($(this).text() === $("#ProductCode").val()){
+         $('#codeError').show();
+         error = true;
+      }
+   });
+   if(error) return false;
+    // ... continue work
+});
+
+$('#Type').on('change', function() {
+  if( this.value == 1 ) //if service
+  {
+     $("#pushaceP").slideUp();
+     $("#alertqty").slideUp();
+     $("#supply").slideUp();
+     $("#UnitP").slideUp();
+  } else if ( this.value == 2 ) {
+     $("#pushaceP").slideUp();
+     $("#alertqty").slideUp();
+     $("#supply").slideUp();
+     $("#UnitP").slideUp();
+  } else {
+     $("#pushaceP").slideDown();
+     $("#alertqty").slideDown();
+     $("#supply").slideDown();
+     $("#UnitP").slideDown();
+  }
+});
+});
+
+
+$(document).on("click", ".open-modalimage", function () {
+var myId = $(this).data('id');
+$(".modal-body #image").attr("src","http://www.dar-elweb.com/demos/zarpos//files/products/"+myId);
+});
+
+
+var quant = [];
+var quantw = [];
+var pricestore = [];
+var productID;
+$(document).ready(function() {
+
+$('#addform').ajaxForm({ //FormID - id of the form.
+
+      success: function (data) {
+         if(data === "service")
+         {
+            location.reload();
+         }else if($('#Type').value == 1) {
+            $('#stockcontent').html(data);
+            $('#stock').modal('show');
+            $('#Addproduct').modal('hide');
+
+            $( "[id='quantity']" ).on('change', function() {
+               var storeID = $(this).attr("store-id");
+               quant.push({
+                  'store_id': storeID,
+                  'quantity': $(this).val()
+               });
+            });
+
+            $( "[id='quantityw']" ).on('change', function() {
+               var warehouseID = $(this).attr("warehouse-id");
+               quantw.push({
+                  'warehouse_id': warehouseID,
+                  'quantity': $(this).val()
+               });
+            });
+
+            $( "[id='pricestr']" ).on('change', function() {
+               var storeID = $(this).attr("store-id");
+               pricestore.push({
+                  'store_id': storeID,
+                  'price': $(this).val()
+               });
+            });
+
+            productID = $('#prodctID').val();
+         } else {
+
+            productID = $('#prodctID').val();
+            $('#combocontent').html(data);
+            $('#combo').modal('show');
+            $('#Addproduct').modal('hide');
+
+            $("#add_item").autocomplete({
+               source: 'http://www.dar-elweb.com/demos/zarpos/productcontroller/suggest',
+               minLength: 1,
+               autoFocus: false,
+               delay: 200,
+               select: function( event, ui ) {
+
+                        event.preventDefault();
+                        if (ui.item.id !== 0) {
+                           var row = add_product_item(ui.item);
+                           if (row) {
+                              $(this).val('');
+                           }
+                        } else {
+                           alert('no match found');
+                           return false;
+                        }
+                     },
+               response: function (event, ui) {
+                    if ($(this).val().length >= 16 && ui.content[0].id == 0) {
+                        alert('no match found');
+                        $('#add_item').focus();
+                        $(this).val('');
+                    }
+                    else if (ui.content.length == 1 && ui.content[0].id != 0) {
+                        ui.item = ui.content[0];
+                        $(this).data('ui-autocomplete')._trigger('select', 'autocompleteselect', ui);
+                        $(this).autocomplete('close');
+                        $(this).removeClass('ui-autocomplete-loading');
+                    }
+                    else if (ui.content.length == 1 && ui.content[0].id == 0) {
+                        alert('no match found');
+                        $('#add_item').focus();
+                        $(this).val('');
+
+                    }
+               }
+            });
+
+         }
+   }
+});
+});
+
+function add_product_item(item, noitem) {
+if (item == null && noitem == null) {
+   return false;
+}
+if(noitem != 1) {
+   var item_id = 0;
+   $.each(items, function(i){
+      if(items[i].item_id == item.id) {
+         items[i].quantity = (parseFloat(items[i].quantity) + 1);
+         item_id = item.id;
+         return false;
+      }
+   });
+   if(item_id == 0) {
+      item.qty = 1;
+      items.push({
+         'item_id': item.id,
+         'quantity': item.qty,
+         'code': item.code,
+         'name': item.name
+      });
+   }
+}
+
+
+$("#Comboprd tbody").empty();
+items.forEach(function(item) {
+   var Tr = $('<tr id="rowid_' + item.item_id + '" class="item_' + item.item_id + '"></tr>');
+   td = '<td>' + item.name + ' (' + item.code + ')</td>';
+   td += '<td><input class="form-control text-center" name="quantity" type="text" value="' + item.quantity + '" item-id="' + item.item_id + '" id="quantit"></td>';
+   td += '<td class="text-center"><i class="fa fa-times tip delt" id="' + item.item_id + '" title="Remove" style="cursor:pointer;"></i></td>';
+   Tr.html(td);
+   Tr.prependTo("#Comboprd");
+});
+console.log(items);
+$( "[id='quantit']" ).on('change', function() {
+   var itemID = $(this).attr("item-id");
+   var val = $(this).val();
+   items.forEach(function(e) {
+      if(e.item_id == itemID) {
+         e.quantity = val;
+      }
+   });
+   console.log(items);
+});
+return true;
+
+}
+
+function addcombo(){
+var productID = $('#prodctID').val();
+$.ajax({
+       url : "http://www.dar-elweb.com/demos/zarpos/productcontroller/addcombo/",
+       type: "POST",
+       data: {items: items, productID: productID},
+       success: function(data)
+       {
+          location.reload();
+       },
+       error: function (jqXHR, textStatus, errorThrown)
+       {
+          alert("error");
+       }
+  });
+}
+
+function updatestock(){
+   $.ajax({
+       url : "http://www.dar-elweb.com/demos/zarpos/products/updatestock/",
+       data: {quant: quant, quantw: quantw, productID: productID, pricest: pricestore},
+       type: "POST",
+       success: function(data)
+       {
+         location.reload();
+       },
+       error: function (jqXHR, textStatus, errorThrown)
+       {
+          alert("error");
+       }
+  });
+ };
+function modifystock(id){
+$.ajax({
+    url : "http://www.dar-elweb.com/demos/zarpos/productcontroller/modifystock/"+id,
+    type: "POST",
+    success: function(data)
+    {
+       $('#stockcontent').html(data);
+       $('#stock').modal('show');
+
+       $( "[id='quantity']" ).on('change', function() {
+         var storeID = $(this).attr("store-id");
+         quant.push({
+            'store_id': storeID,
+            'quantity': $(this).val()
+        });
+        });
+
+        $( "[id='quantityw']" ).on('change', function() {
+         var warehouseID = $(this).attr("warehouse-id");
+         quantw.push({
+            'warehouse_id': warehouseID,
+            'quantity': $(this).val()
+        });
+        });
+
+        $( "[id='pricestr']" ).on('change', function() {
+         var storeID = $(this).attr("store-id");
+         pricestore.push({
+            'store_id': storeID,
+            'price': $(this).val()
+        });
+        });
+
+        productID = $('#prodctID').val();
+    },
+    error: function (jqXHR, textStatus, errorThrown)
+    {
+       alert("error");
+    }
+});
+}
+
+
+function Viewproduct(id){
+$.ajax({
+    url : "http://www.dar-elweb.com/demos/zarpos/productcontroller/Viewproduct/"+id,
+    type: "POST",
+    success: function(data)
+    {
+       $('#viewSectionProduct').html(data);
+       $('#Viewproduct').modal('show');
+    },
+    error: function (jqXHR, textStatus, errorThrown)
+    {
+       alert("error");
+    }
+});
+}
+
+$(document).on('click', '.delt', function () {
+ var id = $(this).attr('id');
+ $.each(items, function(i){
+    if(items[i].item_id == id) {
+        items.splice(i,1);
+        return false;
+    }
+});
+ $(this).closest('#rowid_' + id).remove();
+ console.log(items);
+});
+
+function modifycombo(id){
+$.ajax({
+    url : "http://www.dar-elweb.com/demos/zarpos/productcontroller/modifycombo/"+id,
+    type: "POST",
+    success: function(data)
+    {
+       $('#combocontent').html(data);
+       $('#Viewproduct').modal('hide');
+       $('#combo').modal('show');
+       $.ajax({
+           url : "http://www.dar-elweb.com/demos/zarpos/productcontroller/getcombos/"+id,
+           type: "POST",
+           success: function(data){
+              dataitems = JSON.parse(data);
+              dataitems.forEach(function(e) {
+                 items.push({
+                    'item_id': e.item_id,
+                    'quantity': e.quantity,
+                    'code': e.code,
+                    'name': e.name
+                 });
+               });
+         },
+           error: function (jqXHR, textStatus, errorThrown){alert("error");}
+      });
+       console.log(items);
+       $("#add_item").autocomplete({
+          source: 'http://www.dar-elweb.com/demos/zarpos/productcontroller/suggest',
+          minLength: 1,
+          autoFocus: false,
+          delay: 200,
+          select: function( event, ui ) {
+
+                   event.preventDefault();
+                   if (ui.item.id !== 0) {
+                      var row = add_product_item(ui.item);
+                      if (row) {
+                         $(this).val('');
+                      }
+                   } else {
+                      alert('no match found');
+                      return false;
+                   }
+                },
+          response: function (event, ui) {
+               if ($(this).val().length >= 16 && ui.content[0].id == 0) {
+                   alert('no match found');
+                   $('#add_item').focus();
+                   $(this).val('');
+               }
+               else if (ui.content.length == 1 && ui.content[0].id != 0) {
+                   ui.item = ui.content[0];
+                   $(this).data('ui-autocomplete')._trigger('select', 'autocompleteselect', ui);
+                   $(this).autocomplete('close');
+                   $(this).removeClass('ui-autocomplete-loading');
+               }
+               else if (ui.content.length == 1 && ui.content[0].id == 0) {
+                   alert('no match found');
+                   $('#add_item').focus();
+                   $(this).val('');
+
+               }
+          }
+       });
+    },
+    error: function (jqXHR, textStatus, errorThrown)
+    {
+       alert("error");
+    }
+});
+}
+
+
+function barcode(){
+row = $('#Brrows').val();
+num = $('#Brnum').val();
+$.ajax({
+    url : "http://www.dar-elweb.com/demos/zarpos/productcontroller/barcode/"+row+"/"+num+"/"+productBcode,
+    type: "POST",
+    success: function(data)
+    {
+       $('#printSection').html(data);
+       $('#barcodeP').modal('show');
+    },
+    error: function (jqXHR, textStatus, errorThrown)
+    {
+       alert("error");
+    }
+});
+}
+
+function Printbarcode() {
+$('.modal-body').removeAttr('id');
+window.print();
+$('.modal-body').attr('id', 'modal-body');
+}
+
+function makePrdInvis(id, prd) {
+$.ajax({
+    url : "http://www.dar-elweb.com/demos/zarpos/productcontroller/makePrdInvis/"+id+"/"+prd,
+    type: "POST",
+    success: function(data){},
+    error: function (jqXHR, textStatus, errorThrown)
+    {
+       alert("error");
+    }
+});
+}
+
+
+
+</script>
+
+<!-- Modal -->
+<div class="modal fade" id="Addproduct" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+ <div class="modal-content">
+   <div class="modal-header">
+     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+     <h4 class="modal-title" id="myModalLabel">Add Product</h4>
+   </div>
+   <form action="http://www.dar-elweb.com/demos/zarpos/productcontroller/add" method="post" accept-charset="utf-8" id="addform" enctype="multipart/form-data">      <div class="modal-body">
+         <div class="form-group">
+          <label for="Type">Type</label>
+          <select class="form-control" name="type" id="Type">
+            <option value="0">Standard</option>
+            <option value="1">Service</option>
+            <option value="2">combination</option>
+          </select>
+         </div>
+         <div class="form-group controls">
+          <label for="ProductCode">Code</label>
+          <input type="text" maxlength="30" Required name="code" class="form-control" id="ProductCode" placeholder="Code">
+          <p id="codeError" class="red" hidden>*code must be unique</p>
+        </div>
+        <div class="form-group">
+          <label for="ProductName">Name</label>
+          <input type="text" name="name" maxlength="25" Required class="form-control" id="ProductName" placeholder="Name">
+        </div>
+        <div class="form-group">
+          <label for="Category">Category</label>
+          <select class="form-control" name="category" id="Category">
+            <option>Category</option>
+                              <option value="Et yemekleri">Et yemekleri</option>
+                              <option value="Kebaplar">Kebaplar</option>
+                              <option value="Çorbalar">Çorbalar</option>
+                              <option value="Tatlılar">Tatlılar</option>
+                        </select>
+        </div>
+        <div class="form-group" id="supply">
+          <label for="Supplier">Supplier</label>
+          <select class="form-control" name="supplier" id="Supplier">
+            <option>Supplier</option>
+                              <option value="supplier 01">supplier 01</option>
+                              <option value="Supplier 02">Supplier 02</option>
+                        </select>
+        </div>
+        <div class="form-group" id="pushaceP">
+          <label for="PurchasePrice">Purchase Price (SYP)</label>
+          <input type="number" step="any" value="0" Required name="cost" class="form-control" id="PurchasePrice" placeholder="Purchase Price">
+        </div>
+        <div class="form-group">
+          <label for="Tax">tax (%)</label>
+          <input type="text" maxlength="10" name="tax" class="form-control" id="Tax" placeholder="tax (%)">
+        </div>
+        <div class="form-group">
+           <label for="taxType">Tax Method</label>
+           <select class="form-control" name="taxmethod" id="taxType">
+             <option value="0">inclusive</option>
+             <option value="1">exclusive</option>
+           </select>
+        </div>
+        <div class="form-group">
+          <label for="Price">Price (SYP)</label>
+          <input type="number" step="any" Required name="price" class="form-control" id="Price" placeholder="Price">
+        </div>
+        <div class="form-group" id="UnitP">
+          <label for="Unit">Product Unit</label>
+          <input type="text" step="any" name="unit" class="form-control" id="Unit" placeholder="Product Unit">
+        </div>
+        <div class="form-group" id="alertqty">
+          <label for="AlertQt">Alert Quantity</label>
+          <input type="number" value="0" name="alertqt" class="form-control" id="AlertQt" placeholder="Alert Quantity">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputFile">Input Image</label>
+          <input type="file" name="userfile" id="ImageInput">
+        </div>
+        <div class="form-group">
+          <label for="ProductDescription">Product Description</label>
+          <textarea id="summernote" name="description"></textarea>
+       </div>
+        <div class="btn-group white" data-toggle="buttons">
+           <p class="help-block">Choose color to Display in POS.</p>
+           <label class="btn color01">
+              <input type="radio" name="color" id="option1" value="color01" autocomplete="off" checked> C1
+           </label>
+           <label class="btn color02">
+              <input type="radio" name="color" id="option2" value="color02" autocomplete="off"> C2
+           </label>
+           <label class="btn color03">
+              <input type="radio" name="color" id="option3" value="color03" autocomplete="off"> C3
+           </label>
+           <label class="btn color04">
+              <input type="radio" name="color" id="option4" value="color04" autocomplete="off"> C4
+           </label>
+           <label class="btn color05">
+              <input type="radio" name="color" id="option5" value="color05" autocomplete="off"> C5
+           </label>
+           <label class="btn color06">
+              <input type="radio" name="color" id="option6" value="color06" autocomplete="off"> C6
+           </label>
+           <label class="btn color07">
+              <input type="radio" name="color" id="option7" value="color07" autocomplete="off"> C7
+           </label>
+        </div>
+   </div>
+   <div class="modal-footer">
+     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+     <button type="submit" class="btn btn-add">Submit</button>
+   </div>
+</form>    </div>
+</div>
+</div>
+<!-- /.Modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="ImportProducts" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+ <div class="modal-content">
+   <div class="modal-header">
+     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+     <h4 class="modal-title" id="myModalLabel">Add Product</h4>
+   </div>
+   <div class="modal-body">
+      <div class="form-group">
+        this option is disabled on the demo
+      </div>
+   </div>
+   <div class="modal-footer">
+     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+     <button type="submit" class="btn btn-add">Submit</button>
+   </div>
+ </div>
+</div>
+</div>
+<!-- /.Modal -->
+
+
+<!-- Modal combo -->
+<div class="modal fade" id="combo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document" id="comboModal">
+   <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+       <h4 class="modal-title" id="combo">Combinations</h4>
+     </div>
+     <div class="modal-body" id="modal-body">
+        <div id="combocontent">
+           <!-- combo goes here -->
+        </div>
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-default hiddenpr" onclick="location.reload();">Close</button>
+       <button type="button" class="btn btn-add hiddenpr" onclick="addcombo()">submit</button>
+     </div>
+   </div>
+</div>
+</div>
+<!-- /.Modal -->
+
+<!-- Modal stock -->
+<div class="modal fade" id="stock" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document" id="stockModal">
+   <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+       <h4 class="modal-title" id="stock">Stock</h4>
+     </div>
+     <div class="modal-body" id="modal-body">
+        <div id="stockcontent">
+           <!-- stock goes here -->
+        </div>
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-default hiddenpr" onclick="location.reload();">Close</button>
+       <button type="button" class="btn btn-add hiddenpr" onclick="updatestock()">submit</button>
+     </div>
+   </div>
+</div>
+</div>
+<!-- /.Modal -->
+
+
+<!-- Modal view -->
+<div class="modal fade" id="Viewproduct" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog modal-lg" role="document" id="viewModal">
+   <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+       <h4 class="modal-title" id="view">View product</h4>
+     </div>
+     <div class="modal-body" id="modal-body">
+        <div id="viewSectionProduct">
+           <!-- view goes here -->
+        </div>
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-default hiddenpr" data-dismiss="modal">Close</button>
+     </div>
+   </div>
+</div>
+</div>
+<!-- /.Modal -->
+
+
+<!-- Modal barcode -->
+<div class="modal fade" id="barcode" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document" id="stockModal">
+   <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+       <h4 class="modal-title" id="barcode">Stock</h4>
+     </div>
+     <div class="modal-body" id="modal-body">
+        <div class="form-group col-md-6">
+          <label for="Price">column Number</label>
+          <select Required class="form-control" id="Brrows">
+             <option value="12">1</option>
+             <option value="6">2</option>
+             <option value="4">3</option>
+          </select>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="Price">Number</label>
+          <input type="number" Required name="num" class="form-control" id="Brnum" placeholder="Number" value="10">
+        </div>
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-default hiddenpr" data-dismiss="modal">Close</button>
+       <button type="button" class="btn btn-add hiddenpr" onclick="barcode()">submit</button>
+     </div>
+   </div>
+</div>
+</div>
+<!-- /.Modal -->
+
+
+<!-- Modal barcode -->
+<div class="modal fade" id="barcodeP" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document" id="stockModal">
+   <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+       <h4 class="modal-title" id="barcodeP">Stock</h4>
+     </div>
+     <div class="modal-body" id="modal-body">
+        <div id="printSection" style="text-align: center;">
+          <!-- content -->
+        </div>
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-default hiddenpr" data-dismiss="modal">Close</button>
+       <button type="button" class="btn btn-add hiddenpr" onclick="Printbarcode()">print</button>
+     </div>
+   </div>
+</div>
+</div>
+<!-- /.Modal -->
+
+    <!-- slim scroll script -->
+    <script
+      type="text/javascript"
+      src="common/assets/js/jquery.slimscroll.min.js"
+    ></script>
+    <!-- waves material design effect -->
+    <script type="text/javascript" src="common/assets/js/waves.min.js"></script>
+     <!-- Bootstrap Core JavaScript -->
+     <script type="text/javascript" src="common/assets/js/bootstrap.min.js"></script>
+     <!-- keyboard widget dependencies -->
+     <script type="text/javascript" src="common/assets/js/jquery.keyboard.js"></script>
+     <script type="text/javascript" src="common/assets/js/jquery.keyboard.extension-all.js"></script>
+     <script type="text/javascript" src="common/assets/js/jquery.keyboard.extension-extender.js"></script>
+     <script type="text/javascript" src="common/assets/js/jquery.keyboard.extension-typing.js"></script>
+     <script type="text/javascript" src="common/assets/js/jquery.mousewheel.js"></script>
+      <!-- select2 plugin script -->
+      <script type="text/javascript" src="common/assets/js/select2.min.js"></script>
+      <!-- dalatable scripts -->
+      <script src="common/assets/datatables/js/jquery.dataTables.min.js"></script>
+      <script src="common/assets/datatables/js/dataTables.bootstrap.js"></script>
+      <!-- summernote js -->
+      <script src="common/assets/js/summernote.js"></script>
+        <!-- chart.js script -->
+        <script src="common/assets/js/Chart.js"></script>
+        <!-- moment JS -->
+      <script type="text/javascript" src="common/assets/js/moment.min.js"></script>
+       <!-- Include Date Range Picker -->
+       <script type="text/javascript" src="common/assets/js/daterangepicker.js"></script>
+       <!-- Sweet Alert swal -->
+      <script src="common/assets/js/sweetalert.min.js"></script>
+      <!-- datepicker script -->
+      <script src="common/assets/js/bootstrap-datepicker.min.js"></script>
+      <!-- creditCardValidator script -->
+      <script src="common/assets/js/jquery.creditCardValidator.js"></script>
+       <!-- creditCardValidator script -->
+       <script src="common/assets/js/credit-card-scanner.js"></script>
+       <script src="common/assets/js/jquery.redirect.js"></script>
+       <!-- ajax form -->
+      <script src="common/assets/js/jquery.form.min.js"></script>
+      <!-- custom script -->
+      <script src="common/assets/js/app.js"></script>
+  </body>
+</html>

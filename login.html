@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>POS - Login</title>
+  <link rel="shortcut icon" href="common/files/Setting/logo.png">
+  <!-- normalize & reset style -->
+  <link rel="stylesheet" href="common/assets/css/normalize.min.css"  type='text/css'>
+  <link rel="stylesheet" href="common/assets/css/reset.min.css"  type='text/css'>
+  <!-- Bootstrap Core CSS -->
+  <link href="common/assets/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="common/assets/css/Style-Light.css" rel="stylesheet">
+  <style media="screen">
+    body {
+            background: url(common/assets/img/login.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+         }
+  </style>
+</head>
+<body>
+
+  <div class="modal-dialog">
+    <div class="loginmodal-container">
+       <img src="common/files/Setting/logo.png" alt="logo"  style='max-height: 45px; max-width: 200px; margin: 0 auto'>               <h1>Login to Your Account</h1><br>
+                      <form action="http://www.dar-elweb.com/demos/zarpos/login" method="post" accept-charset="utf-8" class="login">               <input type="text" autofocus name="username" value="admin" placeholder="Username" required>
+       <input type="password" name="password" placeholder="Password" value="password" required>
+       <input type="submit" name="submit" value="Login" class='login loginmodal-submit' />
+      </form>
+      <div class="login-help">
+       &copy; 2020 SalumJS Ulomi              </div>
+    </div>
+ </div>
+</div>
+  
+
+   <!-- jQuery -->
+   <script type="text/javascript" src="common/assets/js/jquery-2.2.2.min.js"></script>
+   <!-- waves material design effect -->
+   <script type="text/javascript" src="common/assets/js/waves.min.js"></script>
+   <!-- Bootstrap Core JavaScript -->
+   <script type="text/javascript" src="common/assets/js/bootstrap.min.js"></script>
+
+   <script type="text/javascript">
+   $(document).ready(function() {
+      $('#login-modal').modal('show').on('hide.bs.modal', function (e) {
+         e.preventDefault();
+      });
+   });
+   </script>
+</body>
+</html>
