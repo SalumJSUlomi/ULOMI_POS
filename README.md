@@ -13,7 +13,7 @@
 - Products with taxes
 - Discount (you can add a spesific discount for every customer OR a discount for each sale)
 - Reports (customers, product number) (monthly stats in the current or other years) ... etc
-- Clients or products repprot in a specific Range.
+- Clients or products report in a specific Range.
 - Barcode scanner compatible (for the products and sales receipt)
 - Print and save receipts
 - Hold sales option
